@@ -1,0 +1,25 @@
+name: all_evoked_expression_sweep
+description: using efficientnetb0
+method: grid
+metric:  
+  name: PEAR_val_con2
+  goal: maximize
+parameters:
+  lstm_layers:
+    distribution: categorical    
+    values: [1, 2]
+    
+  freeze_efficient:
+    distribution: categorical    
+    values: [True, False]    
+    
+  freeze_wav2vec:
+    distribution: categorical    
+    values: [True, False]  
+    
+  lr:
+    distribution: categorical    
+    values: [8e-6, 8e-5, 8e-4]
+
+
+program: run_cqa.py
