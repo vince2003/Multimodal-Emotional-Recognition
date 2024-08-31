@@ -30,7 +30,7 @@ We use [W&B Sweeps](https://docs.wandb.ai/guides/sweeps) to automate the hyperpa
 
 To start the sweep agent, run:
 ```bash
-bash sweep_grid.yaml
+bash sweep_bash.sh
 ```
 
 After the sweep completes, the best hyperparameters will be released as defined in the `sweep_grid.yaml` file.
